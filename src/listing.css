@@ -1,36 +1,47 @@
 .container
 {
   height: 100%; 
-  width: 80px; 
+  width: 70px; 
   position: fixed; 
   z-index: 1;
   background-color: #565761;
+
 }
 .header
 {
     padding-top: 5px;
-    padding-bottom: 5px;
+  padding-bottom: 5px;
   text-align: center;
-  box-shadow: 3px 2px #E5E5E5;
+  box-shadow: 0 8px 6px -6px #E5E5E5;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
 }
 table
 {
+    margin-top: 100px;
     margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
+    margin-right: 80px;
+    width:80%;
     border-collapse: collapse;
+    border-top-left-radius: 5px;
 }
 th{
     background-color: #565761;
     color:white;
-    border-radius: 4px 4px 0px 0px;
-    font-display: inherit;
     padding-top: 4px;
-    padding-bottom: 4px;
-     
+    padding-bottom: 4px;  
+    
+}
+tbody{
+    overflow-y: auto;
 }
 tr{
-    box-shadow: 0px 1px #E5E5E5;
+    box-shadow: 0 7px 6px -5px #E7E7E7;
+    
+   
+}
+td{
+     text-align: center;
+     height: 30px;
+     
 }

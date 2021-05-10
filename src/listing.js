@@ -37,7 +37,9 @@ function Listing() {
           <div class="header">
           <h1>User Registry</h1>
           </div>
+          <div>
           <table>
+          <tbody>
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
@@ -45,12 +47,12 @@ function Listing() {
                         <th>Gender</th>
                         <th>Status</th>
                     </tr>
-                    <tbody>
+                    
                     {content}
                     </tbody>
             </table>
         
-    
+          </div>
         </div>
       );
     }
