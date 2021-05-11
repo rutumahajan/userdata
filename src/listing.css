@@ -1,7 +1,7 @@
 .container
 {
   height: 100%; 
-  width: 70px; 
+  width: 13vh; 
   position: fixed; 
   z-index: 1;
   background-color: #565761;
@@ -9,39 +9,26 @@
 }
 .header
 {
-    padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   text-align: center;
   box-shadow: 0 8px 6px -6px #E5E5E5;
   color: black;
   font-size: 15px;
 }
-table
-{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: 80px;
-    width:80%;
-    border-collapse: collapse;
-    border-top-left-radius: 5px;
-}
-th{
+.tablehead{
     background-color: #565761;
-    color:white;
-    padding-top: 4px;
-    padding-bottom: 4px;  
-    
+    border-radius: 50px;
 }
-tbody{
+.display {
+    margin-top:20vh;
+    width:160vh;
+    margin-bottom: 10vh;
+    margin-left:35vh;
+    height: 100vh;
     overflow-y: auto;
 }
-tr{
-    box-shadow: 0 7px 6px -5px #E7E7E7;
-    
-   
-}
-td{
-     text-align: center;
-     height: 30px;
-     
+.icon
+{
+    color:#565761;
 }
