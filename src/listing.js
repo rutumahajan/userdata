@@ -54,8 +54,8 @@ function Listing()
     return (
     
         <div>
-          <div class="container"></div>
-          <div class="header">
+          <div className="container"></div>
+          <div className="header">
           <h1>User Registry</h1>
           </div>
           <div className="display">
