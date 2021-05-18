@@ -20,3 +20,6 @@ describe('Listing page', ()=>{
 //     expect(header).to.have.lengthOf(1);
 //    })
 // })
+it('Fetches user records from API',()=>{
+   
+})
