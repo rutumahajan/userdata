@@ -1,5 +1,5 @@
 import './App.css';
-import Listing from'./listing'
+import Listing from'./Listing/listing'
 function App() {
   return (
     <div>

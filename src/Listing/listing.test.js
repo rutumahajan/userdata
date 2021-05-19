@@ -14,12 +14,12 @@ describe('Listing page', ()=>{
     expect(header).toBeDefined();
    })
 })
-// it('User Data should be fetched',()=>{
-//     const wrapper=shallow(<Listing/>);
-//      expect(Listing).toHaveBeenCalled();   
-        
-// })
 
+it("Contains the division",()=>
+{
+   const wrapper=shallow(<Listing/>);
+   expect(wrapper.equals(<div className="display"/>)).toBeDefined();
+})
 
 it('Should display User Registry in header',()=>{
     const wrapper = shallow(<Listing/>);

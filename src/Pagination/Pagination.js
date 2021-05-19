@@ -1,7 +1,6 @@
 import React from 'react'
 import './pagination.css'
 import { useState, useEffect } from 'react';
-import fetchUsers from '../server-conn/fetchUsers'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Button from '@material-ui/core/Button';

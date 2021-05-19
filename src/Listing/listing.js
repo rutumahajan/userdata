@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import './listing.css';
+import FetchUser from "./FetchUser";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import { TableCell, TableRow } from '@material-ui/core';
@@ -8,7 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import { makeStyles } from '@material-ui/core/styles';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
-const Url = "https://gorest.co.in/public-api/users";
+
 
 function Listing() 
 {
@@ -23,33 +23,18 @@ function Listing()
     const [usersData, setUsersData] = useState([]);
   
     useEffect(() => {
-      axios.get(Url)
-      .then(response => {
-        setUsersData(response.data["data"]);
-      })
-      .catch(error => {
-        setUsersData([]);
-      })
-      
-    }, []);
+        getdata()
+    })
+
+    async function getdata() {
+     // var data = await FetchUser(1)  
+     // setUsersData(data.data)
+      //console.log(data.data);
+      //getTotalPages(data.meta.pagination.pages)
+
+}
   
-    let content=null;
-    <TableBody>
-    {
     
-      content= usersData.map ((user,key) =>
-      <TableRow key = {user.id}>
-                        <TableCell align="center">{user.id}</TableCell>
-                        <TableCell align="center">{user.name}</TableCell>
-                        <TableCell align="center">{user.email}</TableCell>
-                        <TableCell align="center">{user.gender}</TableCell>
-                        <TableCell align="center">{user.status}</TableCell>
-                        <TableCell align="center"><EditRoundedIcon className="icon"/></TableCell>
-                        <TableCell align="center"><DeleteOutlineRoundedIcon className = "icon"/></TableCell>
-     </TableRow>
-      ) 
-    }
-    </TableBody>
     const classes = useStyles()
     return (
     
@@ -58,6 +43,7 @@ function Listing()
           <div className="header">
           <h1>User Registry</h1>
           </div>
+         
           <div className="display">
           <Table stickyHeader className={classes.roundborder}>
           <TableHead>
@@ -72,7 +58,23 @@ function Listing()
             </TableRow>
             
         </TableHead>  
-        {content}
+        <TableBody>
+        {
+    
+     usersData && usersData.map ((user,key) =>
+      <TableRow key = {user.id}>
+                        <TableCell align="center">{user.id}</TableCell>
+                        <TableCell align="center">{user.name}</TableCell>
+                        <TableCell align="center">{user.email}</TableCell>
+                        <TableCell align="center">{user.gender}</TableCell>
+                        <TableCell align="center">{user.status}</TableCell>
+                        <TableCell align="center"><EditRoundedIcon className="icon"/></TableCell>
+                        <TableCell align="center"><DeleteOutlineRoundedIcon className = "icon"/></TableCell>
+     </TableRow>
+      ) 
+      
+    }
+    </TableBody>
         </Table>
           </div>
         </div>
