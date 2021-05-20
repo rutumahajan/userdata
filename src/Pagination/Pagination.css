@@ -30,6 +30,9 @@
     height: 4vh;
     
 }
+label{
+  margin-left: 2vh;
+}
   .paginationItem span {
     position: absolute;
     top: 50%;

@@ -10,6 +10,11 @@ beforeEach(() => {
    jest.clearAllMocks();
     
 }),
+it('should have input type as Number',()=>{
+    const wrapper = shallow(<Pagination onPage = {onPage} totalPage = {totalPages}/>);
+    expect(wrapper.find('input').getElement().props.type).toBe('number');
+   }),
+   
 it('Should go to previous page of current page ',()=>{
     const wrapper = shallow(<Pagination onPage = {onPage} totalPage = {totalPages}/>);
     wrapper.find("#backward-button").props().onClick();
