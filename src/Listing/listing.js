@@ -24,6 +24,7 @@ function Listing()
     const [usersData, setUsersData] = useState([]);
     const [totalpages, setTotalPages] = useState([]);
     const [pageNo, setPageNo] = useState(1);
+    
     useEffect(() => {
         getdata()
     })

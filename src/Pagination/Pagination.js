@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 
 function Pagination({ onPage,totalpage}) {
-    const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
     let pageLimit = 5
     let dataLimit = 20
     //console.log(totalpage);
@@ -78,9 +78,10 @@ function Pagination({ onPage,totalpage}) {
           className={`next ${currentPage === totalpage ? 'disabled' : ''}`}
           />
          <button className = "root" onClick = {getPage}>
-                    skip to {totalpage}
+                    skip to 
                 </button>
                 <input type = "number" className="skiptoinput" onChange = { (e) => setCurrentPage(e.target.value)} ></input>
+                <label>of {totalpage}</label>
       </div>
     </div>
     );
