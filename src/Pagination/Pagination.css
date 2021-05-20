@@ -1,34 +1,62 @@
-.pageinput{
-    width: 3vh;
-    height: 3vh;
-    margin-top: 0vh;
-    display: inline;
-}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+  
+  .paginationItem {
+    background: #fff;
+    
+    padding: 8px 11px;
 
-.pagelabel{
-    display: inline;
-    font-size: 2.0vh;
-    margin-left: -1vh;
-}
-
-.skipto{
-    margin-left: 60vh;
-    display: inline;
-    background-color: #4856FD;
-    color : white;
-    font-size: medium;
-    border-radius: 5px;
-    border-color: 1px solid #4856FD;
-}
-
-.skiptoinput{
-    width:4vh;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .root
+  {
+        color:black;
+    font-size: 16px;
+    height: 5vh;
+    border: 1px solid #888;
+    margin-left: 10vh;
+  }
+    .skiptoinput{
+    width:8vh;
     margin-left: 2vh;
-    height: 3vh;
-    margin-top: 1vh;
+    height: 4vh;
+    
 }
-
-.pagination{
-    margin-left: 90vh;
-    margin-top: 2vh;
-}
+  .paginationItem span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .prev,
+  .next {
+    background: #fff;
+    border: none;
+    padding: 2px;
+    color: rgb(13, 13, 14);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    margin: 0 6px;
+    
+  }
+  
+  .paginationItem.active {
+    border: 1px solid #888;
+    color: #D3D3D3;
+    pointer-events: none;
+  }
+  
+  .prev.disabled,
+  .next.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    color: #999;
+  }

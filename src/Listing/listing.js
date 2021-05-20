@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './listing.css';
+import Pagination from '../Pagination/Pagination.js';
 import FetchUser from "./FetchUser";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,7 +11,7 @@ import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
 
 
-function Listing() 
+function Listing(pageNo) 
 {
     const useStyles = makeStyles({
         root: {
@@ -21,16 +22,17 @@ function Listing()
       });
     
     const [usersData, setUsersData] = useState([]);
+    const [totalpages, setTotalPages] = useState([]);
   
     useEffect(() => {
         getdata()
     })
 
     async function getdata() {
-     // var data = await FetchUser(1)  
-     // setUsersData(data.data)
+     var data = await FetchUser(pageNo)  
+     setUsersData(data.data)
       //console.log(data.data);
-      //getTotalPages(data.meta.pagination.pages)
+      setTotalPages(data.meta.pagination.pages);
 
 }
   
@@ -76,6 +78,14 @@ function Listing()
     }
     </TableBody>
         </Table>
+          </div>
+          <div>
+          <Pagination
+            data={usersData}
+            pageLimit={5}
+            dataLimit={20}
+            totalpage={totalpages}
+          />
           </div>
         </div>
       );
