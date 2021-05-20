@@ -11,7 +11,7 @@ import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
 
 
-function Listing(pageNo) 
+function Listing() 
 {
     const useStyles = makeStyles({
         root: {
@@ -23,7 +23,7 @@ function Listing(pageNo)
     
     const [usersData, setUsersData] = useState([]);
     const [totalpages, setTotalPages] = useState([]);
-  
+    const [pageNo, setPageNo] = useState(1);
     useEffect(() => {
         getdata()
     })
@@ -35,6 +35,11 @@ function Listing(pageNo)
       setTotalPages(data.meta.pagination.pages);
 
 }
+
+    const onCurrentPage = (onPage) => {
+      console.log(onPage)
+      setPageNo(onPage)
+    }
   
     
     const classes = useStyles()
@@ -81,9 +86,8 @@ function Listing(pageNo)
           </div>
           <div>
           <Pagination
-            data={usersData}
-            pageLimit={5}
-            dataLimit={20}
+            
+            onPage = {onCurrentPage}
             totalpage={totalpages}
           />
           </div>
@@ -91,4 +95,4 @@ function Listing(pageNo)
       );
     }
     
-    export default Listing;   
+    export default Listing;
