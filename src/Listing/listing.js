@@ -32,7 +32,6 @@ function Listing()
     async function getdata() {
      var data = await FetchUser(pageNo)  
      setUsersData(data.data)
-      //console.log(data.data);
       setTotalPages(data.meta.pagination.pages);
 
 }

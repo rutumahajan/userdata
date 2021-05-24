@@ -9,9 +9,7 @@ function Pagination({ onPage,totalpage}) {
   const [currentPage, setCurrentPage] = useState(1);
     let pageLimit = 5
     let dataLimit = 20
-    //console.log(totalpage);
     const getPage = () => {
-            console.log(currentPage)
             onPage(currentPage);
 
     }
