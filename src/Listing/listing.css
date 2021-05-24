@@ -1,0 +1,34 @@
+.container
+{
+  height: 100%; 
+  width: 13vh; 
+  position: fixed; 
+  z-index: 1;
+  background-color: #565761;
+
+}
+.header
+{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  text-align: center;
+  box-shadow: 0 8px 6px -6px #E5E5E5;
+  color: black;
+  font-size: 15px;
+}
+.tablehead{
+    background-color: #565761;
+    border-radius: 50px;
+}
+.display {
+    margin-top:20vh;
+    width:170vh;
+    margin-bottom: 10vh;
+    margin-left:28vh;
+    height: 100vh;
+    overflow-y: auto;
+}
+.icon
+{
+    color:#565761;
+}
