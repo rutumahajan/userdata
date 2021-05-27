@@ -1,5 +1,5 @@
 import React from "react";
-import AddUser from './AddUser';
+import UpdateUser from './UpdateUser';
 import ReactDOM from 'react-dom';
 import { shallow,render} from 'enzyme';
 
@@ -8,9 +8,10 @@ let wrapper;
     const setState = jest.fn();
     const useStateSpy = jest.spyOn(React, "useState")
     useStateSpy.mockImplementation((init) => [init, setState]);
-
+    const closeBut = jest.fn()
+    const userdata = { "id":10, "name":"Rutuja", "email":"xyz@gmail.com", "gender":"Female", "status":"Active"}
     beforeEach(() => {
-        wrapper = shallow(<AddUser />);
+        wrapper = shallow(<UpdateUser closeBut = {closeBut} user = {userdata}/>);
         jest.clearAllMocks();
     });
 
