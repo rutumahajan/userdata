@@ -41,20 +41,20 @@ let wrapper;
     it('Should check the options for status attribute',()=> {
         var statusfield = wrapper.find('div.inputtext').getElements()[3];
         var opt = statusfield.props.children[1];
-        var options = selectOption.props.children;
+        var options = opt.props.children;
         expect(options[0].props.value).toBe("Inactive");
         expect(options[1].props.value).toBe("Active");
     })
 
 
     it('Check if input type of name is text', () => {
-        var namefield = tree.find('div.formfield').getElements()[0];
+        var namefield = wrapper.find('div.inputtext').getElements()[0];
         var namediv = namefield.props.children[1];
         expect(namediv.props.type).toBe('text');
     }),
 
     it('Check if input type of email is text', () => {
-        var emailfield = tree.find('div.formfield').getElements()[1];
+        var emailfield = wrapper.find('div.inputtext').getElements()[1];
         var emaildiv = emailfield.props.children[1];
         expect(emaildiv.props.type).toBe('text');
     })
