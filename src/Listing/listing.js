@@ -11,6 +11,7 @@ import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
 
 
+
 function Listing() 
 {
     const useStyles = makeStyles({
@@ -34,7 +35,7 @@ function Listing()
      setUsersData(data.data)
       setTotalPages(data.meta.pagination.pages);
 
-}
+    }
 
     const onCurrentPage = (onPage) => {
       console.log(onPage)
@@ -46,11 +47,7 @@ function Listing()
     return (
     
         <div>
-          <div className="container"></div>
-          <div className="header">
-          <h1>User Registry</h1>
-          </div>
-         
+           
           <div className="display">
           <Table stickyHeader className={classes.roundborder}>
           <TableHead>
@@ -75,7 +72,7 @@ function Listing()
                         <TableCell align="center">{user.email}</TableCell>
                         <TableCell align="center">{user.gender}</TableCell>
                         <TableCell align="center">{user.status}</TableCell>
-                        <TableCell align="center"><EditRoundedIcon className="icon"/></TableCell>
+                        <TableCell align="center"><EditRoundedIcon className = "icon"/></TableCell>
                         <TableCell align="center"><DeleteOutlineRoundedIcon className = "icon"/></TableCell>
      </TableRow>
       ) 

@@ -1,5 +1,6 @@
 import React from "react";
 import Listing from'./listing'
+import App from '../App'
 import ReactDOM from 'react-dom';
 import { shallow,render} from 'enzyme';
 import { ExpansionPanelActions } from "@material-ui/core";
@@ -22,7 +23,6 @@ it("Contains the division",()=>
 })
 
 it('Should display User Registry in header',()=>{
-    const wrapper = shallow(<Listing/>);
-    const header=wrapper.find('h1').text();
-    expect(header).toEqual('User Registry');
+    const wrapper = shallow(<App/>);
+    expect(wrapper.find('h1').text()).toEqual('User Registry');
    })
