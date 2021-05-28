@@ -19,15 +19,16 @@ let wrapper;
         it("Should capture name correctly onChange", () => {
             const name = wrapper.find("input").at(0);
             name.simulate('change' ,  { target: {value: 'Test'}});
-            expect(setState).toHaveBeenCalledWith("Test");
+
+            expect(wrapper.find("input").at(0).props().value).toEqual('Test');
         });
     });
 
     describe("Email input", () => {
         it("Should capture email correctly onChange", () => {
             const email = wrapper.find("input").at(1);
-            email.simulate('change' ,  { target: {value: 'Testing'}});
-            expect(setState).toHaveBeenCalledWith("Testing");
+            email.simulate('change' , { target: {value: 'Testing'}});
+            expect(wrapper.find("input").at(1).props().value).toEqual('Testing');
         });
     });
     it('Should check the options for gender attribute',()=> {

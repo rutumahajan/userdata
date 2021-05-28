@@ -9,7 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import { makeStyles } from '@material-ui/core/styles';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
-import OpenUpdate from '../UpdateUser/OpenUpdate.js'
+
 
 
 function Listing() 
@@ -72,7 +72,7 @@ function Listing()
                         <TableCell align="center">{user.email}</TableCell>
                         <TableCell align="center">{user.gender}</TableCell>
                         <TableCell align="center">{user.status}</TableCell>
-                        <OpenUpdate user = {user}/>
+                        <TableCell align="center"><EditRoundedIcon className = "icon"/></TableCell>
                         <TableCell align="center"><DeleteOutlineRoundedIcon className = "icon"/></TableCell>
      </TableRow>
       ) 
