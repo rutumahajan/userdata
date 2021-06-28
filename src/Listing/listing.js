@@ -7,9 +7,9 @@ import TableBody from '@material-ui/core/TableBody';
 import { TableCell, TableRow } from '@material-ui/core';
 import TableHead from '@material-ui/core/TableHead';
 import { makeStyles } from '@material-ui/core/styles';
-import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
-import EditRoundedIcon from '@material-ui/icons/EditRounded';
 import OpenUpdate from '../UpdateUser/OpenUpdate.js'
+import OpenDelete from '../DeleteUser/OpenDelete.js'
+
 
 
 function Listing() 
@@ -73,7 +73,7 @@ function Listing()
                         <TableCell align="center">{user.gender}</TableCell>
                         <TableCell align="center">{user.status}</TableCell>
                         <OpenUpdate user = {user}/>
-                        <TableCell align="center"><DeleteOutlineRoundedIcon className = "icon"/></TableCell>
+                        <OpenDelete user = {user}/>
      </TableRow>
       ) 
       
