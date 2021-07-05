@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     
     
 })
-function OpenDelete({user}){
+function OpenDelete({user,refreshData}){
     const classes = useStyles()
     const [userToDelete, setUserToDelete] = useState()
     const [open, setOpen] = useState(false);
@@ -39,7 +39,7 @@ function OpenDelete({user}){
          aria-labelledby="simple-modal-title"
          aria-describedby="simple-modal-description"
         >
-            <DeleteUser closeBut = {handleCloseButton} user = {userToDelete}/>
+            <DeleteUser closeBut = {handleCloseButton} user = {userToDelete} refreshData={refreshData}/>
        </Modal>
        </TableCell>
         

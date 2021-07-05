@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     
     
 })
-const UpdateUser=({closeBut,user})=>
+const UpdateUser=({closeBut,user,refreshData})=>
 {
     const classes = useStyles()
     const [id, setUserId] = useState(user.id)
@@ -34,6 +34,7 @@ const UpdateUser=({closeBut,user})=>
         var data = await updaterecord(user)
         if( parseInt(data.code/100) === 2 ) {
             closeBut(false)
+            refreshData()
         }
     }
   return (

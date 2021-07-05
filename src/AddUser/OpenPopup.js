@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import Modal from '@material-ui/core/Modal';
 import './AddUser.css'
+import Filter from'../Filter/Filter';
 import AddUser from'./AddUser.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState, useEffect } from 'react';

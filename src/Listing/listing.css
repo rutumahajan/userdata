@@ -9,12 +9,12 @@
 }
 .header
 {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-top: 0.1em;
+
   text-align: center;
   box-shadow: 0 8px 6px -6px #E5E5E5;
   color: black;
-  font-size: 15px;
+  font-size: 14px;
 }
 .tablehead{
     background-color: #565761;
@@ -23,12 +23,17 @@
 .display {
     margin-top:20vh;
     width:170vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     margin-left:28vh;
-    height: 100vh;
+    height: 22em;
     overflow-y: auto;
 }
 .icon
 {
     color:#565761;
+}
+.filterblock
+{
+    margin-left: 10em;
+    margin-bottom: -2.5em;
 }

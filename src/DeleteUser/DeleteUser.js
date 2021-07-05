@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     
     
 })
-const DeleteUser=({closeBut,user})=>
+const DeleteUser=({closeBut,user,refreshData})=>
 {
     const classes = useStyles()
     const [id, setUserId] = useState(user.id)
@@ -30,6 +30,7 @@ const DeleteUser=({closeBut,user})=>
         
         deleterecord(id)
         closeBut(false)
+        refreshData();
     }
   return (
       <div>

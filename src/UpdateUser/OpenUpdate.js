@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     
     
 })
-function OpenUpdate({user}){
+function OpenUpdate({user,refreshData}){
     const classes = useStyles()
     const [userToUp, setUserToUp] = useState()
     const [open, setOpen] = useState(false);
@@ -24,6 +24,7 @@ function OpenUpdate({user}){
     const handleUpdate = () => {
         setUserToUp(user)
         setOpen(true);
+        
     }
 
     const handleCloseButton = (closeBut) => {
@@ -40,7 +41,7 @@ function OpenUpdate({user}){
          aria-labelledby="simple-modal-title"
          aria-describedby="simple-modal-description"
         >
-            <UpdateUser closeBut = {handleCloseButton} user = {userToUp}/>
+            <UpdateUser closeBut = {handleCloseButton} user = {userToUp} refreshData={refreshData}/>
        </Modal>
         </div>
     )
